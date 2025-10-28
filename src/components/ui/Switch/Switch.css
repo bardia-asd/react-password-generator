@@ -1,0 +1,47 @@
+button {
+    all: unset;
+}
+
+.SwitchRoot {
+    width: 32px;
+    height: 16px;
+    background-color: oklch(30% 0.04 265);
+    border-radius: 9999px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+
+    &:focus {
+        box-shadow: 0 0 0 2px oklch(55% 0.06 265);
+    }
+
+    &[data-state="checked"] {
+        background-color: oklch(42% 0.12 260);
+        box-shadow: 0 0 6px oklch(60% 0.12 260 / 0.6);
+    }
+}
+
+.SwitchThumb {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: oklch(88% 0.02 265);
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 200ms ease, background-color 200ms ease;
+    transform: translateX(0);
+    will-change: transform;
+
+    &[data-state="checked"] {
+        transform: translateX(19px);
+        background-color: oklch(90% 0.03 260);
+    }
+}
+
+.Label {
+    font-size: 15px;
+    line-height: 1;
+    user-select: none;
+    cursor: pointer;
+}
