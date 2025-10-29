@@ -1,8 +1,14 @@
 import { useState } from "react";
-import "./styles/App.css";
+import "./App.css";
+import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator";
 
 function App() {
-    return <div className="container"></div>;
+
+    return (
+        <div className="container">
+            <PasswordGenerator />
+        </div>
+    );
 }
 
 export default App;
